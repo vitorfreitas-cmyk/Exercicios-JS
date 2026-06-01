@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /*Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+body{
+background-color: aliceblue;
+}
+}
+/*Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+body{
+background-color: rgb(182, 217, 247);
+}
+}
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+body{
+background-color: rgb(57, 157, 245);
+}
+}
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+body{
+background-color: rgb(10, 110, 198);
+text-align: right;
+}
+}
+/*Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+body{
+background-color: rgb(158, 160, 98);
+text-align: center;
+}
+}
+.display{display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 15px; }
+
+
+    </style>
+</head>
+<body>
+    <h2>hello word</h2>
+    <div class="display"><div> coluna 1</div>
+    <div> coluna 2</div>
+    <div> coluna 3</div>
+    <div> coluna 4</div>
+</div>
+    
+    
+</body>
+</html>
