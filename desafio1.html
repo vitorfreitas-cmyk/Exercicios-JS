@@ -1,77 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BURGUER</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Menu Estilo Aplicativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-icons/bootstrap-icons/bootstrap-icons.css" integrity="sha384-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #a4a4ed;
+            color:#334155;
+        }
+
+        .bloco {
+            background-color: #F8FAFC;
+            padding: 20px;
+            border: 1px solid rgb(255, 145, 0);
+        }
+
+
+        .menu-principal {
+            background-color: #0F172A;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .menu-principal ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .menu-principal a {
+            color: #38BDF8;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.8rem;
+            gap: 4px;
+        }
+
+
+        .menu-principal a span {
+            font-size: 0.75rem;
+        }
+
+  
+        .logo { display: none; }
+
+  
+        .menu-principal i {
+            font-size: 1.4rem;
+            color: #4c59bb; 
+        }
+
+
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            grid-template-areas: 
+                "topo"
+                "meio1"
+                "meio2"
+                "meio3"
+                "final"
+                "final2"
+                "textoMapa";
+        }
+
+  
+        .menu-principal {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            border-top: 2px solid #0B0F19;
+        }
+        .final2{
+                background-color: rgb(177, 71, 71);
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 6px;
+        }
+
+        .textoMapa{
+            color:rgb(255, 255, 255);
+            background-color: rgb(81, 137, 81);
+            margin-bottom: 50px;
+            height: 20vh;
+            border-radius: 6px;
+            text-align: center;
+            display: none;
+        }
+
+  
+        .top   { grid-area: topo; }
+        .meio1 { grid-area: meio1; }
+        .meio2 { grid-area: meio2; }
+        .meio3 { grid-area: meio3; }
+        .final { grid-area: final; }
+        .final2 { grid-area: final2; }
+        .textoMapa { grid-area: textoMapa;}
+
+  
+        @media (min-width: 768px) { 
+            .grid-container {
+                grid-template-areas: 
+                    "menu   menu   menu   menu" 
+                    "topo   topo   topo   topo"
+                    "meio1  meio2  meio2  meio3"
+                    "final  final  final  final"
+                    "final2 final2 final2 textoMapa";
+                padding: 20px;
+                gap: 15px;
+            }
+
+
+            .menu-principal {
+                grid-area: menu;
+                position: static; 
+                height: 70px;
+                padding: 0 40px;
+                border-top:  #489124;
+                border-bottom: 2px solid #0B0F19;
+            }
+
+            .menu-principal ul {
+                width: auto;
+                gap: 30px;
+            }
+
+  
+            .menu-principal a {
+                flex-direction: row;
+                font-size: 1rem;
+                gap: 8px;
+            }
+
+   
+            .logo {
+                display: block;
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: #ffffff;
+            }
+
+            .final2{
+                background-color: rgb(177, 71, 71);
+                height: 50vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 6px;
+            }
+
+            .textoMapa{
+            color:rgb(255, 255, 255);
+            background-color: rgb(81, 137, 81);
+            margin-bottom: 50px;
+            height: 50vh;
+            border-radius: 6px;
+            display: block;
+            }
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
-<title> Hamburguer 100% Free</title>
-
 <body>
-    <header class="bg-dark">
-        <div class="container">
-            <div class="row ">
-                <img src="img/hamburguer0.pnh.jpg" class="w-100">
-            </div>
+
+    <nav class="menu-principal">
+        <div class="logo">BurgerClub</div>
+        <ul>
+            <li><a href="#home"><i class="bi bi-house-door"></i><span>Home</span></a></li>
+            <li><a href="#cardapio"><i class="bi bi-egg-fried"></i><span>Cardápio</span></a></li>
+            <li><a href="#contato"><i class="bi bi-whatsapp"></i><span>Pedir</span></a></li>
+            <li><a href="#sobre"><i class="bi bi-info-circle"></i><span>Sobre</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="grid-container">
+        <div class="top bloco">
+            <img src="img/banner232.jpg" class="img-fluid" alt="Hambúrguer">
         </div>
-    </header>
-    <main class="bg-dark">
-        <div class="container">
-            <div class="row bg-dark text-white p-3 text-center border p-3 border-white">
-                <div class="col-2 border-white">
-                    AGENDA
-
-                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non cupiditate ea dicta ducimus
-                        deserunt consequuntur provident pariatur suscipit, corporis omnis distinctio laborum magnam
-                        nesciunt quam. Minima voluptates iure labore nemo?iusto amet totam ex recusandae? Placeat nobis sapiente veritatis. Architecto temporibus, eum
-                        eaque laboriosam error perferendis doloremque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorum, expedita officia ullam porro quaerat cumque quod voluptatum quo fugiat dicta autem ipsum! Perspiciatis amet sit, neque deleniti rem aliquam. Lorem ipsum dolor sit amet consectetur </p>
-                </div>
-
-                <div class="col-6 text-center border-white">
-                    LANCHES E PORÇÕES
-
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, ipsam error laboriosam minus
-                        iusto amet totam ex recusandae? Placeat nobis sapiente veritatis. Architecto temporibus, eum
-                        eaque laboriosam error perferendis doloremque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorum, expedita officia ullam porro quaerat cumque quod voluptatum quo fugiat dicta autem ipsum! Perspiciatis amet sit, neque deleniti rem aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem non illum exercitationem voluptate quo! Dolor voluptas facilis culpa! Eius facere fugit, hic ullam accusantium perferendis nihil molestias vitae incidunt ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est aliquid voluptas repellat culpa dignissimos molestias tempora odio debitis unde quo perferendis, veritatis obcaecati tempore inventore natus deleniti molestiae, animi facere?</p>
-                </div>
-
-                <div class="col-4 text-center border-white">
-                    NOSSOS ESPAÇOS
-
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, eligendi harum! Modi placeat,
-                        unde voluptatum alias id excepturi corporis sed error, eaque labore qui 
-                        <iframe width="360"
-                            height="315"
-                            src="https://www.youtube.com/embed/lc__4nNft0c"
-                            title="CARAMBA, EU ERREI!!! HOMEM-ARANHA UM NOVO DIA: MILES MORALES, HULK EXPLICADO"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                        </iframe> 
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, modi iure cupiditate excepturi, ab ipsa expedita exercitationem quos porro eligendi pariatur nihil quibusdam unde aut nemo accusamus soluta! Ipsam, quibusdam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis molestiae harum atque distinctio delectus, cum fuga, nam esse ratione dolorem error commodi praesentium amet quis quos, nostrum eius enim minus.
-                    </p>
-                </div>
-            </div>
+        
+        <div id="sobre" class="meio1 bloco">
+            <h3>Eventos</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
+        
+        <div id="cardapio" class="meio2 bloco">
+            <h3>Lanches e Porções</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nosso cardápio conta com os melhores blends artesanais da região.</p>
+        </div>
+        
+        <div class="meio3 bloco">
+            <h3>Nossos Espaços</h3>
+            <p>Ambiente climatizado e área kids para sua famíliiente climatizado e área kids para sua família.</p>
+        </div>
+        
+        <div id="contato" class="final bloco">
+            <p>Funcionamento: Terça a Domingo, das 18h às 23h. Av. Principal, 123.</p>
+        </div>
+
+        <div class="final2">
+            <h2>ONDE ESTAMOS</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.026917372573!2d-73.97762159999999!3d40.7614327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f97bdb102b%3A0xea9f8fc0b3ffff55!2sThe%20Museum%20of%20Modern%20Art!5e0!3m2!1spt-BR!2sbr!4v1780407960200!5m2!1spt-BR!2sbr" width="400" height="200"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+        </div>
+        <div class="textoMapa">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum aliquid commodi placeat architecto numquam minima, facilis quas nostrum consequuntur, modi tempora repellendus dicta voluptatum quibusdam esse, praesentium iste tempore recusandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem animi pariatur, numquam ad consectetur beatae tempora molestias voluptatum doloremque, sit laudantium error perspiciatis voluptatem ducimus repellat placeat soluta dicta vitae.</p>
+        </div>
+        
+
     </main>
 
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script>
-
 </body>
-
 </html>
