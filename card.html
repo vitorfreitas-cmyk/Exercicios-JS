@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .card-menu {
+            background-color: rgba(250, 223, 215, 0.795);
+            color: rgb(61, 38, 41);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">/* ROW PARA ORGANIZAR AS COLUNAS * /
+        <div class="col-sm-6">
+            <div class="card" style="width: 20rem; margin: 20px;">
+                <img src="img/flor2.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">TITULO</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium officiis
+                        quibusdam temporibus perspiciatis repellendus eos, sed sapiente vel sit optio! Totam expedita
+                        enim ratione fugiat, est eligendi similique nobis corrupti!</p>
+                    <a href="#" class="btn btn-danger"> CLIQUE AQUI</a>
+                    <a href="#" class="card-link" style="margin-left: 5px;">LINK NO CARD</a>
+
+                </div>
+            </div>
+            <div class="card card-menu" style="width: 20rem; margin: 20px;">/* CARD PARA MENU * /
+                <div class="card-header" data-bs-toggle="collapse" href="#abab" style="text-align: center;">
+                    MENU
+                </div>
+                <div class="collapse" id="abab">
+                    <ul class="list-group list-group-flush">/* LISTA DE ITENS DO MENU * /
+                        <li class="list-group-item">Batata</li>/* ITEM 1 * /
+                        <li class="list-group-item">Maça</li>/* ITEM 2 * /
+                        <li class="list-group-item">Abacate</li>/* ITEM 3 * /
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card text-center" style="margin: 20px;">/* CARD COM NAV * /
+                <div class="card-header">/* CABEÇALHO DO CARD * /
+                     Navs */
+                     <ul class="nav nav-pills card-header-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="true" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>/* LINK DESABILITADO * /
+                        </li>
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="true" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">/* CORPO DO CARD * /
+                    <h5 class="card-title">Special title treatment</h5>/* TITULO DO CARD * /
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>/* TEXTO DO CARD * /
+                    <a href="#" class="btn btn-primary">Go somewhere</a>/* cor do botão * /
+                </div>
+            </div>
+
+            <div class="card text-bg-dark" style="margin: 20px;">/* CARD COM IMAGEM DE FUNDO * /
+                 <img src="img/flor2.jpg" class="card-img" alt="">/* IMAGEM DE FUNDO * /
+                <img src="img/banner232.jpg" class="card-img" alt="" style="width: 40rem; ">
+                <div class="card-img-overlay">/* SOBREPOSIÇÃO DE TEXTO NA IMAGEM * /
+                    <h5 class="card-title">Card title</h5>        /* TITULO DO CARD * /
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small>Last updated 3 mins ago</small></p>/* TEXTO DO CARD * /
+                </div>
+            </div>
+            <div class="card text-bg-primary mb-3" style="max-width: 20rem; margin: 20px;">
+                <div class="card-header">Header</div>/* CABEÇALHO DO CARD * /
+                <div class="card-body">/* CORPO DO CARD * /
+                    <h5 class="card-title">Primary card title</h5>/* TITULO DO CARD * /
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card text-bg-secondary mb-3" style="max-width: 20rem; margin: 20px">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card text-bg-success mb-3" style="max-width: 20rem; margin: 20px">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div> 
+            <div class="card text-bg-danger mb-3" style="max-width: 20rem; margin: 20px">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card text-bg-warning mb-3" style="max-width: 20rem; margin: 20px">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card text-bg-info mb-3" style="max-width: 20rem; margin: 20px">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card text-bg-light mb-3" style="max-width: 20rem; margin: 20px">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card text-bg-dark mb-3" style="max-width: 20rem; margin: 20px">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+            <div class="card col-12" style="margin: 20px;">
+                <img src="img/hamburguer0.pnh.jpg" class="card-img-top">
+                <h4 class="card-header">Cabeçalho</h4>
+                <div class="card-body">
+                    <h5 class="card-title">TITULO DO CARD</h5>
+                    <h6 class="card-subtitle">SUBTITULO DO CARD</h6>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, in at laboriosam eaque magni labore sint. Iure, iste ducimus unde officiis quibusdam accusamus pariatur nihil ullam? Nam similique tempora doloribus.</p>
+                    <a href="#" class="card-link">Link 1</a>
+                    <a href="#" class="card-link">Link 2</a> 
+                    <a href="#" class="card-link">Link 3</a>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
