@@ -6,14 +6,17 @@
     <title>Document</title>
     <script>
         var nome = prompt('Qual seu nome?');
-        var salário = prompt('Qual seu salário');
+        var salário = parseFloat(('Qual seu salário'));
         var vendas = prompt('Qual o valor da sua venda')
-        var comissão = vendas*0.025;
+        var comissão = 0;
+
+        comissão= vendas*0.025;
+        salário= salário+comissão;
     </script>
 </head>
 <body>
     <script>
-        document.write('<h2>Olá ' + nome + ', seu salário é de ' + salário+comissão + ' e sua venda é de R$ ' + vendas + ', correto? </h2>');
+        document.write('<h2>Olá ' + nome + ', seu salário' + salário + ' e sua venda é de R$ ' + vendas + ', sua comissão é de' + comissão +' </h2>');
     </script>
     
     
