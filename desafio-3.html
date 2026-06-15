@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio o3</title>
+</head>
+<body>
+    <script>
+        var nome = prompt( 'qual seu nome?');
+        var classe = prompt('qual sua classe? (1/2/3)');
+        var venda = Number(prompt('digite o total mensal de venda?'));
+
+        if( classe =='1'){
+            var total = 1500 + (0.25 * venda);
+        }
+         else if( classe =='2'){
+            var total = 2000 + (0.03 * venda);
+        }
+         else if( classe =='3'){
+            var total = 2500 + (0.035 * venda);
+        }
+        document.write('Você irá receber nesse mês '+ total +'reais')
+      
+        
+    </script>
+</body>
+</html>
