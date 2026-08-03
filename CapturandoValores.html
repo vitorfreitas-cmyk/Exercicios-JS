@@ -7,10 +7,11 @@
 </head>
 <body>
     <input type="text" id="entrada" onkeypress="mostravalor()">
+    <input type="text" id="saida" disabled="disabled">
     <script>
         function mostravalor(){
-        var texto = document.getElementById('entrada').value;
-        console.log(texto);
+        var texto = document.getElementById('entrada').value; //capturando o valor
+        document.getElementById('saida').value = texto; //enviando o valor
         }
     </script>
     
