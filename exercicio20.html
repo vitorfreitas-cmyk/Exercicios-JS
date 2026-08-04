@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 20</title>
+     <style>
+        input {
+            background-color: antiquewhite;
+            border-radius: 10px;
+            padding-left: 10px;
+            border: 0px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="entrada" onkeyup="letraNumero()">
+    <hr>
+    <input type="text" disabled="disabled" id="letra">
+    <input type="text" disabled="disabled" id="numero">
+    <br>
+
+    <script>
+        function letraNumero(){
+            var ent = document.getElementById('entrada').value;
+            if (ent == "1" || ent == "2" || ent == "3"|| ent == "4" || ent == "5" || ent == "6" || ent == "7"|| ent == "8" || ent == "9" || ent == "0"){
+                document.getElementById('numero').value = ent
+            }else(
+                document.getElementById('letra').value = ent
+            )
+            
+            document.getElementById('entrada').value = null;
+        }
+    </script>
+</body>
+</html>

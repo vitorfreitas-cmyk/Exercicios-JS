@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 19</title>
+    <style>
+        input {
+            background-color: antiquewhite;
+            border-radius: 10px;
+            padding-left: 10px;
+            border: 0px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="valorInicial" onkeypress="mostravalor()>
-    <input type="text" id="valorDomeio" onkeypress="mostravalor()>
+    <input type="text" id="N1">
+    <input type="text" id="N2">
+    <input type="text" disabled="disabled" id="N3">
     <br>
-    <input type="text" id="valorFinal">
+    <button onclick="calcular()">Calcular</button>
 
     <script>
-         function mostravalor(){
-        var texto = document.getElementById('valorInicial').value;
-        var texto = document.getElementById('valorDomeio').value;
-        document.getElementById('valorFinal').value = valorInicial * valorFinal;
-         }
+        function calcular(){
+            var num1 = Number(document.getElementById('N1').value);
+            var num2 = Number(document.getElementById('N2').value);
+            var num3 = num1 + num2;
+            document.getElementById('N3').value = num3
+        }
     </script>
 </body>
 </html>
